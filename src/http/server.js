@@ -1,13 +1,13 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 8080
-const axiosRoutes = require('./axios/routes/axios-routes')
-const nodeFetchRoutes = require('./node-fetch/routes/node-fetch-routes')
+const routes = require('./routes')
+
 
 //config
 app.use(express.json())
-app.use(axiosRoutes)
-app.use(nodeFetchRoutes)
+app.use(routes)
+
 
 
 
